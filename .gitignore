@@ -54,6 +54,9 @@ modules.builtin
 /System.map
 /Module.markers
 
+/out
+/proton-clang
+
 #
 # RPM spec file (make rpm-pkg)
 #
