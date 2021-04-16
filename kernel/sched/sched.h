@@ -1968,6 +1968,15 @@ unsigned long arch_scale_cpu_capacity(struct sched_domain *sd, int cpu)
 #endif
 
 #ifdef CONFIG_SMP
+
+struct sched_walt_cpu_load
+{
+       unsigned long prev_window_util;
+       unsigned long nl;
+       unsigned long pl;
+       u64 ws;
+};
+
 static inline unsigned long capacity_of(int cpu)
 {
 	return cpu_rq(cpu)->cpu_capacity;
